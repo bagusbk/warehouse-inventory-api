@@ -1,7 +1,6 @@
 package repositories
 
 import (
-	"fmt"
 	"warehouse/config"
 	"warehouse/models"
 
@@ -22,7 +21,6 @@ func (r *UserRepository) Create(user *models.User) error {
 
 func (r *UserRepository) FindByUsername(username string) (*models.User, error) {
 	var user models.User
-	fmt.Println(user)
 	err := r.db.Where("username = ?", username).First(&user).Error
 	if err != nil {
 		return nil, err
