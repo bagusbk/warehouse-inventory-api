@@ -1,0 +1,1 @@
+DELETE FROM beli_header;

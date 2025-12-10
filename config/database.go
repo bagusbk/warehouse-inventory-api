@@ -39,10 +39,8 @@ func DBInit() *gorm.DB {
 
 	log.Println("✔️ Success Connection to database")
 
-	// simpan ke variabel global untuk GORM
 	DB = gormDB
 
-	// ambil koneksi *sql.DB untuk migrate
 	sqlDB, err := gormDB.DB()
 	if err != nil {
 		log.Fatal("❌ Gagal mengambil sql.DB:", err)
