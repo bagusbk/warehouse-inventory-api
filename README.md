@@ -47,13 +47,7 @@ export SESSION_SECRET="your-secret-key"
 export PORT=5000
 ```
 
-4. Run database migrations:
-```bash
-psql $DATABASE_URL -f migrations/001_create_tables.sql
-psql $DATABASE_URL -f migrations/002_seed_data.sql
-```
-
-5. Start the server:
+4. Start the server:
 ```bash
 go run main.go
 ```
